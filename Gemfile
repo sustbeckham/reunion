@@ -1,5 +1,7 @@
-source 'https://rubygems.org'
-gem 'jekyll'
-gem 'redcarpet'
-gem 'jekyll-paginate'
-gem 'jekyll-sitemap'
+source "https://rubygems.org"
+
+# to publish on github page
+gem 'github-pages', group: :jekyll_plugins
+
+# to publich without github page
+#gem "jekyll"
