@@ -1,7 +1,7 @@
 ---
 title: LoadBalance(负载均衡) 
 last_updated: Feb 25, 2016
-summary: "TCP路由，网关协议转发等内容收录在此。"
+summary: "负载均衡，TCP路由，网关协议转发等内容收录在此。"
 sidebar: mydoc_sidebar
 permalink: mydoc_posts.html
 folder: network
