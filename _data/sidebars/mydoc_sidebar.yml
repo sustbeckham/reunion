@@ -85,11 +85,11 @@ entries:
 
     folderitems:
     - title: tcp
-      url: /mydoc_pages.html
+      url: /network_tcp.html
       output: web, pdf
 
     - title: loadbalance
-      url: /mydoc_posts.html
+      url: /network_loadbalance.html
       output: web, pdf
 
     #- title: Lists
