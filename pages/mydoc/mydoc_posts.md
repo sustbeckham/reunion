@@ -1,12 +1,12 @@
 ---
-title: Posts
+title: LoadBalance(负载均衡)
 tags: [getting_started, formatting, content_types]
 keywords: posts, blog, news, authoring, exclusion, frontmatter
 last_updated: Feb 25, 2016
 summary: "You can use posts when you want to create blogs or news type of content."
 sidebar: mydoc_sidebar
 permalink: mydoc_posts.html
-folder: mydoc
+folder: network
 ---
 
 ## 2021.07.13 我们是这样崩的
@@ -14,7 +14,8 @@ folder: mydoc
 ```yaml
 研发配置错误权重，导致4层LB七层SLB陷入死循环, 下游服务无法接受响应
 ```
-https://mp.weixin.qq.com/s?__biz=Mzg3Njc0NTgwMg==&mid=2247487272&idx=1&sn=038a30ce61706c97e3397eee982b1486&scene=21#wechat_redirect 
+[原文链接](https://mp.weixin.qq.com/s?__biz=Mzg3Njc0NTgwMg==&mid=2247487272&idx=1&sn=038a30ce61706c97e3397eee982b1486&scene=21#wechat_redirect )
+[拓展阅读:负载均衡的前世今生](https://cloud.tencent.com/developer/article/1458765)
 
 ## Allowed frontmatter
 
