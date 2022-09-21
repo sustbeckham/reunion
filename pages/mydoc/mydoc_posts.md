@@ -1,7 +1,5 @@
 ---
-title: LoadBalance(负载均衡)
-tags: [getting_started, formatting, content_types]
-keywords: posts, blog, news, authoring, exclusion, frontmatter
+title: LoadBalance(负载均衡) 
 last_updated: Feb 25, 2016
 summary: "TCP路由，网关协议转发等内容收录在此。"
 sidebar: mydoc_sidebar
