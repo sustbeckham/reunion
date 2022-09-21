@@ -52,10 +52,6 @@ entries:
       url: /mydoc_release_notes_60.html
       output: web, pdf
 
-    - title: thread
-      url: /mydoc_release_notes_50.html
-      output: web, pdf
-      
     - title: classloader
       url: /mydoc_release_notes_60.html
       output: web, pdf
@@ -63,8 +59,8 @@ entries:
     - title: concurrent
       url: /mydoc_release_notes_50.html
       output: web, pdf
-      
-      - title: threadlocal
+
+    - title: threadlocal
       url: /mydoc_release_notes_60.html
       output: web, pdf  
 
@@ -80,10 +76,6 @@ entries:
       url: /mydoc_install_jekyll_on_mac.html
       output: web, pdf
 
-    - title: crash
-      url: /mydoc_install_jekyll_on_windows.html
-      output: web, pdf
-      
     - title: oom
       url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf   
