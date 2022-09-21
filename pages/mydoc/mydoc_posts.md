@@ -9,15 +9,12 @@ permalink: mydoc_posts.html
 folder: mydoc
 ---
 
-## About posts
+## 2021.07.13 我们是这样崩的
 
-Posts are typically used for blogs or other news information because they contain a date and are sorted in reverse chronological order.
-
-You create a post by adding a file in the \_posts folder that is named yyyy-mm-dddd-permalink.md, which might be 2016-02-25-my-latest-updates.md. You can use any number of subfolders here that you want.
-
-Posts use the post.html layout in the \_layouts folder when you are viewing the post.
-
-The news.html file in the root directory shows a reverse chronological listing of the 10 latest posts
+```yaml
+研发配置错误权重，导致4层LB七层SLB陷入死循环, 下游服务无法接受响应
+```
+https://mp.weixin.qq.com/s?__biz=Mzg3Njc0NTgwMg==&mid=2247487272&idx=1&sn=038a30ce61706c97e3397eee982b1486&scene=21#wechat_redirect 
 
 ## Allowed frontmatter
 
