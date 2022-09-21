@@ -3,7 +3,7 @@ title: LoadBalance(负载均衡)
 tags: [getting_started, formatting, content_types]
 keywords: posts, blog, news, authoring, exclusion, frontmatter
 last_updated: Feb 25, 2016
-summary: "You can use posts when you want to create blogs or news type of content."
+summary: "TCP路由，网关协议转发等内容收录在此。"
 sidebar: mydoc_sidebar
 permalink: mydoc_posts.html
 folder: network
