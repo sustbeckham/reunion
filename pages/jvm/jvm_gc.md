@@ -1,5 +1,5 @@
 ---
-title: Crash
+title: GC
 last_updated: Feb 25, 2016
 summary: "垃圾回收。"
 sidebar: mydoc_sidebar

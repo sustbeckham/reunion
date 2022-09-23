@@ -78,7 +78,11 @@ entries:
 
     - title: oom
       url: /jvm_oom.html
-      output: web, pdf   
+      output: web, pdf
+
+    - title: crash
+        url: /jvm_crash.html
+        output: web, pdf
 
   - title: network
     output: web, pdf
