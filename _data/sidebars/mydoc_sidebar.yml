@@ -81,8 +81,8 @@ entries:
       output: web, pdf
 
     - title: crash
-        url: /jvm_crash.html
-        output: web, pdf
+      url: /jvm_crash.html
+      output: web, pdf
 
   - title: network
     output: web, pdf
