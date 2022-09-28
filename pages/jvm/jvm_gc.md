@@ -11,7 +11,7 @@ folder: jvm
 
 ```yaml
 背景:
-JDK7；G1垃圾回收; 
+JDK7；G1垃圾回收; FGC;
 
 原因:
 G1在JDK7下只有FGC才会进行PermGen中的类卸载。该系统流量大, G1GC频繁, 同时系统设置了-XX:SoftRefLRUPolicyMSPerMB=0,
@@ -32,7 +32,6 @@ PermGen驻留较多的DelegateClassloader, 以及加载好的MethodAccessor。�
 3. SoftRefLRUPolicyMSPerMB搞大点
 ```
 
-[原文链接](https://heapdump.cn/article/54786?from=pc) 
-
+[原文链接](https://heapdump.cn/article/54786?from=pc)
 
 {% include links.html %}
