@@ -7,6 +7,29 @@ permalink: jvm_gc.html
 folder: jvm
 ---
 
+## 命令行生成MAT分析报告
+
+```yaml
+背景:
+dump出来的堆太大, MAT无法打开;
+
+记录:
+1. MAT在MAC下的安装目录基本在/Applications/mat.app/Contents/Eclipse, 新建下方脚本
+2. 调整MemoryAnalyzer.ini中的内存到适当位置
+
+脚本:
+./ParseHeapDump.sh \
+/Users/zhangyingchao/Documents/dump/my.dump  \
+org.eclipse.mat.api:suspects \
+org.eclipse.mat.api:overview \
+org.eclipse.mat.api:top_components
+```
+
+[原文链接](https://www.cnblogs.com/hellxz/p/use_mat_linux_command_line_generate_reports.html)
+
+
+
+
 ## 从一起GC血案谈到反射原理
 
 ```yaml
