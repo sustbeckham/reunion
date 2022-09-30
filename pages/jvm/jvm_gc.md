@@ -57,4 +57,26 @@ PermGen驻留较多的DelegateClassloader, 以及加载好的MethodAccessor。�
 
 [原文链接](https://heapdump.cn/article/54786?from=pc)
 
+
+
+## HBase问题诊断–RegionServer宕机
+
+```yaml
+背景:
+FGC;HBase;CMS;
+
+原因:
+不是个好的Case。着重说明了面对FGC联动引发的链接被动关闭问题是如何解决的(挂起线程, 导致和下游交互的线程也被挂起), 但是我没看到FGC
+发生的本质是啥
+
+记录:
+1. fgc(concurrent mode failure)。意味着虚拟机还未执行完本次GC的情况下又来了大量数据导致内存不够, 虚拟机被迫挂起所有线程FGC
+2. -XX:CMSInitiatingOccupancyFraction=60意味着CMGC会在老年代使用达到60%的时候触发一次CMSGC.
+
+疑问:
+1. 还是没说明流量为什么大的原因? 是我看漏了么?
+```
+
+[原文链接](http://hbasefly.com/2016/04/15/hbase-regionserver-crash/)
+
 {% include links.html %}
