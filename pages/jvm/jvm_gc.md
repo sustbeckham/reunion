@@ -72,11 +72,40 @@ FGC;HBase;CMS;
 记录:
 1. fgc(concurrent mode failure)。意味着虚拟机还未执行完本次GC的情况下又来了大量数据导致内存不够, 虚拟机被迫挂起所有线程FGC
 2. -XX:CMSInitiatingOccupancyFraction=60意味着CMGC会在老年代使用达到60%的时候触发一次CMSGC.
+3. 看截图里有个有趣的类JvmPauseMonitor。可以代码级别监控GC情况。看了细节果然是基于JMX的。
 
 疑问:
 1. 还是没说明流量为什么大的原因? 是我看漏了么?
 ```
 
 [原文链接](http://hbasefly.com/2016/04/15/hbase-regionserver-crash/)
+
+[JvmPauseMonitor](https://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/util/JvmPauseMonitor.java)
+
+
+
+
+## 一次超诡异的FGC，这个原因找了好久！
+
+```yaml
+背景:
+CMS;MetaSpace;FGC;ClassLoader;
+
+原因: 
+频繁创建新的类加载器, 每个新的类加载器都会持有一块初始内存, 时间久了会撑爆MetaSpace, 可以理解为一种内存碎片
+
+记录: 
+1. Full GC (Metadata GC Threshold)看到这样的关键字就直接能想到上述原因了
+2. 进一步, GC的明细里看到Meta的used还远远小于commited, 碎片化的特征
+3. 作者的例子直接用findClass会更准确的触发问题 
+4. 特娘的IDEA坑劳资, 要注意java -xx class才行, IDEA给劳资整反了导致命令参数被忽略
+5. MetaSpace下一个ClassLoader持有了一个很精细的内存模型, 这个回头我单独拿出来说说(ClassLoaderData::metaspace_non_null())
+
+疑问: 
+```
+
+[原文链接](https://heapdump.cn/article/179270)
+
+[踩了一个java命令行参数顺序的坑](https://since1986.github.io/a6794556)
 
 {% include links.html %}
