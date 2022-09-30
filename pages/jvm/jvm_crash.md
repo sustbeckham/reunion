@@ -7,7 +7,7 @@ permalink: jvm_crash.html
 folder: jvm
 ---
 
-## 协助美团kafka团队定位到的一个JVM Crash问题
+## 协助美团kafka团队定位Crash问题
 
 ```yaml
 背景:
